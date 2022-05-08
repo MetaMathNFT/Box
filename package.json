@@ -1,0 +1,28 @@
+{
+  "name": "nft-presale",
+  "version": "1.0.0",
+  "author": "menezesphill",
+  "license": "MIT",
+  "scripts": {
+    "start": "browserify ./src/contract.js -o ./src/bundle.js && static-server ./src --port 9011",
+    "build": "browserify ./src/contract.js -o ./src/bundle.js && parcel build src/index.html"
+  },
+  "dependencies": {
+    "@metamask/onboarding": "^1.0.1",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@truffle/hdwallet-provider": "^2.0.4",
+    "async": "^2.6.4",
+    "browserify": "^17.0.0",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.7",
+    "parcel": "^2.4.1",
+    "prettier": "^2.6.2",
+    "static-server": "^2.2.1",
+    "web3": "^1.7.1"
+  },
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.5.25"
+  }
+}
